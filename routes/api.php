@@ -15,8 +15,10 @@ use App\Http\Controllers\RajaongkirController;
 |
 */
 
-Route::get('/search/provinces', [RajaongkirController::class, 'searchProvinces']);
-Route::get('/search/cities', [RajaongkirController::class, 'searchCities']);
+Route::middleware('basic.auth')->group(function () {
+    Route::get('/search/provinces', 'RajaongkirController@searchProvinces');
+    Route::get('/search/cities', 'RajaongkirController@searchCities');
+});
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

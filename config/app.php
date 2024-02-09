@@ -5,6 +5,8 @@ use Illuminate\Support\ServiceProvider;
 
 return [
 
+    'SWAPAPI_VALUE' => env('SWAPAPI_VALUE', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
