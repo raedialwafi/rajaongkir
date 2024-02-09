@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<a href="https://codeclimate.com/github/raedialwafi/rajaongkir/maintainability"><img src="https://api.codeclimate.com/v1/badges/5c8a5fc18f63e9c326a8/maintainability" /></a>
+<a href="https://codeclimate.com/github/raedialwafi/rajaongkir/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5c8a5fc18f63e9c326a8/test_coverage" /></a>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Raja Ongkir App
 
-## About Laravel
+## Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Rajaongkir Laravel Project is a web application built on the Laravel framework. It primarily focuses on integrating with the Rajaongkir API to fetch and manage data related to provinces and cities. The application includes functionalities such as fetching data from the Rajaongkir API, storing it in the database, and providing an API endpoint to search for provinces and cities.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Project Structure
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The project follows a modular structure with the following components:
 
-## Learning Laravel
+- **Fetch Raja Ongkir Data Command:** Responsible for fetching provinces and cities data from the Rajaongkir API and storing it in the database.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **RajaOngkir Controller:** Provides API endpoints to search for provinces and cities.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Onboarding and Development Guide
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Getting Started
+1. **Install PHP, MySQL, NPM**
+   Read from this link to install:
+    - [Github](https://docs.github.com/en)
+    - PHP and Composer installed on your machine. You can download them from [php.net](https://www.php.net/) and [getcomposer.org](https://getcomposer.org/).
+    - [Laravel](https://laravel.com/)
+    - [MySQL](https://www.mysql.com/)
+    - [NPM](https://www.npmjs.com/)
 
-## Laravel Sponsors
+2. **Clone the Repository**
+   ```bash
+   git clone https://github.com/raedialwafi/rajaongkir.git
+   cd rajaongkir
+3. **Configure Environment**
+   ```bash
+   cp .env.example .env
+   
+   Fill the value
+   --------------------------
+   RAJAONGKIR_API_KEY=
+   SWAPAPI_VALUE=
+   PARTNER_IN_AUTH_USERNAME=
+   PARTNER_IN_AUTH_PASSWORD=
+   ```
+   Note: 
+   1. Contact the developer for the API Key
+   2. SWAPAPI_VALUE `True` means the data is taken from the Rajaongkir API, while `False` means the data is taken from the database.
+4. **Migrate Database**
+   ```bash
+   php artisan migrate
+5. **Seed Database (Optional)**
+    ```bash
+    php artisan db:seed
+6. **Run the Laravel Project**
+    ```bash
+    php artisan serve
+The project will be accessible at http://localhost:8000.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Additional Steps
+If the project includes JavaScript and a package.json file, you can install JavaScript dependencies using NPM:
 
-### Premium Partners
+    npm install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+You can run unit test with:
+
+    php artisan test .\tests
+
+## Endpoints
+
+For all API endpoints, please read the blueprint or the routes folder in the code.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contributions to this project are welcome! Feel free to open issues or submit pull requests to improve the functionality or fix any bugs.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-source and available under the [MIT License](LICENSE).
