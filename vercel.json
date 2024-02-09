@@ -4,15 +4,20 @@
   "functions": {
       "api/index.php": { "runtime": "vercel-php@0.6.0" }
   },
-  "routes": [{
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.php"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.php"
-  }],
+    }
+  ],
   "env": {
-      "APP_NAME": "Raja Ongkir",
       "APP_ENV": "production",
       "APP_DEBUG": "false",
-      "APP_URL": "https://rajaongkir.vercel.app",
+      "APP_URL": "rajaongkir-five.vercel.app",
 
       "APP_CONFIG_CACHE": "/tmp/config.php",
       "APP_EVENTS_CACHE": "/tmp/events.php",
