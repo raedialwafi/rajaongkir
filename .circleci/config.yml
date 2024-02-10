@@ -16,6 +16,9 @@ jobs:
           MYSQL_PASSWORD: secret
     steps:
       - checkout
+      - run: |
+          # Install Composer globally
+          curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       - run: apt-get update
       - run: apt-get install -y libsqlite3-dev
       - run: composer install --no-interaction --prefer-dist --optimize-autoloader
