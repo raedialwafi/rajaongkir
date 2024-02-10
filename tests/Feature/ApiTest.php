@@ -17,8 +17,8 @@ class ApiTest extends TestCase
     public function it_can_search_provinces()
     {
         $this->mock(RajaongkirController::class)
-            ->shouldReceive('callAction') // Tambahkan ini
-            ->andReturnNull() // Atau sesuaikan dengan kebutuhan Anda
+            ->shouldReceive('callAction')
+            ->andReturnNull()
             ->shouldReceive('searchProvinces')
             ->shouldReceive('getMiddleware')
             ->andReturn([]);
@@ -36,8 +36,8 @@ class ApiTest extends TestCase
     {
         // Mock hasil panggilan controller
         $this->mock(RajaongkirController::class)
-            ->shouldReceive('callAction') // Tambahkan ini
-            ->andReturnNull() // Atau sesuaikan dengan kebutuhan Anda
+            ->shouldReceive('callAction')
+            ->andReturnNull()
             ->shouldReceive('searchCities')
             ->shouldReceive('getMiddleware')
             ->andReturn([]);
