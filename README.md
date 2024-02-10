@@ -36,6 +36,7 @@ The project follows a modular structure with the following components:
    
    Fill the value
    --------------------------
+   APP_KEY=
    RAJAONGKIR_API_KEY=
    SWAPAPI_VALUE=
    PARTNER_IN_AUTH_USERNAME=
@@ -44,22 +45,23 @@ The project follows a modular structure with the following components:
    Note: 
    1. Contact the developer for the API Key
    2. SWAPAPI_VALUE `True` means the data is taken from the Rajaongkir API, while `False` means the data is taken from the database.
-4. **Migrate Database**
+4. **Composer and NPM Install**
+   ```bash
+   composer install
+   npm install
+5. **Migrate Database**
    ```bash
    php artisan migrate
-5. **Seed Database (Optional)**
+6. **Seed Database (Optional)**
     ```bash
     php artisan db:seed
-6. **Run the Laravel Project**
+7. **Run the Laravel Project**
     ```bash
     php artisan serve
+    npm run dev
 The project will be accessible at http://localhost:8000.
 
 ### Additional Steps
-If the project includes JavaScript and a package.json file, you can install JavaScript dependencies using NPM:
-
-    npm install
-
 You can run unit test with:
 
     php artisan test .\tests

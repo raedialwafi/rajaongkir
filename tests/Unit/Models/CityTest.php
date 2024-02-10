@@ -15,13 +15,9 @@ class CityTest extends TestCase
     {
         $city = City::factory()->create();
 
-        // Verifikasi bahwa model City telah terbuat dengan benar
         $this->assertInstanceOf(City::class, $city);
 
-        // Verifikasi isi atribut yang diisi oleh factory
         $this->assertEquals($city->name, $city->name);
         $this->assertEquals($city->province_id, $city->province_id);
-
-        // Jika ada atribut lain yang diisi oleh factory, tambahkan verifikasi di sini
     }
 }
