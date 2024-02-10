@@ -17,18 +17,18 @@ jobs:
     steps:
       - checkout
       - run: |
-          # Install unzip and 7z
+          # Install unzip, 7z, libzip-dev, and git
           apt-get update
           apt-get install -y unzip
           apt-get install -y p7zip-full
-
-          # Install Git
+          apt-get install -y libzip-dev
           apt-get install -y git
 
           # Install Composer globally
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       - run: |
           # Enable zip extension for PHP
+          docker-php-ext-configure zip
           docker-php-ext-install zip
       - run: composer install --no-interaction --prefer-dist --optimize-autoloader
       - run: cp .env.example .env
