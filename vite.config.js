@@ -8,6 +8,10 @@ export default defineConfig({
             'resources/js/app.js',
         ]),
     ],
+    build: {
+        outDir: 'public/build',
+        manifest: true,
+      },
     resolve: {
         alias: {
             '@': '/resources/js'
