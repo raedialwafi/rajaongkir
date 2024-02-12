@@ -119,9 +119,7 @@
     "signal-exit": "^4.1.0",
     "source-map-js": "^1.0.2",
     "string-width": "^5.1.2",
-    "string-width-cjs": "^4.2.3",
     "strip-ansi": "^7.1.0",
-    "strip-ansi-cjs": "^6.0.1",
     "sucrase": "^3.35.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
     "thenify": "^3.3.1",
@@ -133,7 +131,6 @@
     "vite-plugin-full-reload": "^1.1.0",
     "which": "^2.0.2",
     "wrap-ansi": "^8.1.0",
-    "wrap-ansi-cjs": "^7.0.0",
     "yaml": "^2.3.4"
   },
   "keywords": [],
