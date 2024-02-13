@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\City;
 use App\Traits\Partners\RajaOngkir\RajaOngkirRequestTrait;
+use DatabaseMigrations;
 
 class FetchCities extends Command
 {
