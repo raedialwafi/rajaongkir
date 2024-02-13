@@ -8,6 +8,7 @@ use App\Traits\Response\ProvinceResponseTrait;
 use App\Models\Province;
 use App\Models\City;
 use App\Traits\Partners\RajaOngkir\RajaOngkirRequestTrait;
+use DatabaseMigrations;
 
 class RajaongkirController extends Controller
 {
